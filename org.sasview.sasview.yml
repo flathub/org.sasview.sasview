@@ -22,6 +22,37 @@ build-options:
     LLVM_INSTALL_DIR: /usr/lib/sdk/llvm16
     SHIBOKEN_DEBUG_LEVEL: 'full'
 modules:
+  - name: ocl-icd
+    build-options:
+      arch:
+        x86_64:
+          config-opts:
+            - --enable-custom-vendordir=/usr/lib/x86_64-linux-gnu/GL/OpenCL/vendors
+        aarch64:
+          config-opts:
+            - --enable-custom-vendordir=/usr/lib/aarch64-linux-gnu/GL/OpenCL/vendors
+    config-opts:
+      - --enable-official-khronos-headers
+      - --disable-update-database
+    sources:
+      - type: git
+        url: https://github.com/OCL-dev/ocl-icd.git
+        commit: fdde6677b21329432db8b481e2637cd10f7d3cb2
+        tag: v2.3.2
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+    modules:
+      - name: khronos-opencl-headers
+        buildsystem: cmake-ninja
+        sources:
+          - type: git
+            url: https://github.com/KhronosGroup/OpenCL-Headers.git
+            commit: 4ea6df132107e3b4b9407f903204b5522fdffcd6
+            tag: v2024.10.24
+            x-checker-data:
+              type: git
+              tag-pattern: ^v([\d.]+)$
   - name: hdf5
     buildsystem: autotools
     sources:
