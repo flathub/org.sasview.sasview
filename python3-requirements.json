@@ -910,6 +910,39 @@
             ]
         },
         {
+            "name": "python3-nanobind",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"nanobind\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/20/fa/8e5930837f9b08202c4e566cf529480b0c3266e88f39723388baf8c69700/nanobind-2.5.0.tar.gz",
+                    "sha256": "cc8412e94acffa20a369191382bcdbb6fbfb302e475e87cacff9516d51023a15"
+                }
+            ]
+        },
+        {
+            "name": "python3-pyopencl",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyopencl\" --no-build-isolation"
+            ],
+            "build-options": {
+                "env": {
+                    "CL_INC_DIR": "/app/include/CL"
+                }
+            },
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/28/88/0ac460d3e2def08b2ad6345db6a13613815f616bbbd60c6f4bdf774f4c41/pyopencl-2025.1.tar.gz",
+                    "sha256": "0116736d7f7920f87b8db4b66a03f27b1d930d2e37ddd14518407cc22dd24779"
+                }
+            ]
+        },
+        {
             "name": "python3-jupyter-core",
             "buildsystem": "simple",
             "build-commands": [
