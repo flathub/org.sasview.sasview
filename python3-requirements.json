@@ -355,8 +355,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/13/8e/15ba2980e2704edecc53d15506a5bfa6efb3b1cadc5e4df7dc277bc199f8/trove_classifiers-2025.2.18.16.tar.gz",
-                    "sha256": "b1ee2e1668589217d4edf506743e28b1834da128f8a122bad522c02d837006e1"
+                    "url": "https://files.pythonhosted.org/packages/e1/67/038a8c7f60ffd6037374649826dbaa221e4b17755016b71a581162a15ce1/trove_classifiers-2025.2.18.16-py3-none-any.whl",
+                    "sha256": "7f6dfae899f23f04b73bc09e0754d9219a6fc4d6cca6acd62f1850a87ea92262"
                 }
             ]
         },
