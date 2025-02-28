@@ -1612,6 +1612,20 @@
             ]
         },
         {
+            "name": "python3-tinycc",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tinycc\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/aa/5e/f414d24a902fe7616bad19616c326a4463056c1909352c7df99a80b64660/tinycc-1.1.tar.gz",
+                    "sha256": "decc99beebdbbd1110bc44e6b2fd2a4531b0f126ac5dd65a3e867dd4ac536f1e"
+                }
+            ]
+        },
+        {
             "name": "python3-sasdata",
             "buildsystem": "simple",
             "build-commands": [
