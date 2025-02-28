@@ -1542,8 +1542,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/74/b5/c1684fb8120ad868b43e4b037ac83aafaa70724cdb078d066bae836c31f6/python_bidi-0.6.3.tar.gz",
-                    "sha256": "e12114969001a328aea859f79efc30ab9c15241befb86e07029d8961d97fae36"
+                    "url": "https://files.pythonhosted.org/packages/c4/de/1822200711beaadb2f334fa25f59ad9c2627de423c103dde7e81aedbc8e2/python_bidi-0.6.6.tar.gz",
+                    "sha256": "07db4c7da502593bd6e39c07b3a38733704070de0cbf92a7b7277b7be8867dd9"
                 },
                 "bidi_cargo_sources.json"
             ]
