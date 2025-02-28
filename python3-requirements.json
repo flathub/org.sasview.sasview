@@ -881,6 +881,21 @@
             ]
         },
         {
+            "name": "Cython",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-index --ignore-installed --find-links=file://${PWD} --prefix=${FLATPAK_DEST} --no-build-isolation ."
+            ],
+            "cleanup": ["*"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://files.pythonhosted.org/packages/5a/25/886e197c97a4b8e254173002cdc141441e878ff29aaa7d9ba560cd6e4866/cython-3.0.12.tar.gz",
+                    "sha256": "b988bb297ce76c671e28c97d017b95411010f7c77fa6623dd0bb47eed1aee1bc"
+                }
+            ]
+        },
+        {
             "name": "python3-pyzmq",
             "buildsystem": "simple",
             "build-commands": [
@@ -1008,21 +1023,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/c6/8a/635610fb6131bc702229e2780d7b042416866ab78f8ed1ff24c4b23a2f4c/qtconsole-5.6.1-py3-none-any.whl",
                     "sha256": "3d22490d9589bace566ad4f3455b61fa2209156f40e87e19e2c3cb64e9264950"
-                }
-            ]
-        },
-        {
-            "name": "Cython",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-index --ignore-installed --find-links=file://${PWD} --prefix=${FLATPAK_DEST} --no-build-isolation ."
-            ],
-            "cleanup": ["*"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/5a/25/886e197c97a4b8e254173002cdc141441e878ff29aaa7d9ba560cd6e4866/cython-3.0.12.tar.gz",
-                    "sha256": "b988bb297ce76c671e28c97d017b95411010f7c77fa6623dd0bb47eed1aee1bc"
                 }
             ]
         },
