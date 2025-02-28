@@ -1601,7 +1601,7 @@
             "name": "python3-xhtml2pdf",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"xhtml2pdf-0.2.16-py3-none-any.whl\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"xhtml2pdf\" --no-build-isolation"
             ],
             "sources": [
                 {
