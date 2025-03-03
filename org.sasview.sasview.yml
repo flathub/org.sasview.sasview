@@ -121,7 +121,7 @@ modules:
     sources:
       - type: git
         url: "https://code.qt.io/pyside/pyside-setup.git"
-        tag: "6.7.3"
+        tag: "6.8.2"
   - name: sasview
     buildsystem: simple
     build-commands:
