@@ -4,7 +4,7 @@ runtime-version: 6.8
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-  - org.freedesktop.Sdk.Extension.llvm16
+  - org.freedesktop.Sdk.Extension.llvm19
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: 6.8
 command: sasview
@@ -108,6 +108,11 @@ modules:
         commit: 769337c227799aa60911562b6940530f4a86eb3c
   - name: pyside-setup
     buildsystem: simple
+    build-options:
+      append-path: /usr/lib/sdk/llvm19/bin
+      append-ld-library-path: /usr/lib/sdk/llvm19/lib
+      env:
+        LLVM_INSTALL_DIR: /usr/lib/sdk/llvm19
     build-commands:
       - python3 setup.py build --qtpaths=/usr/bin/qtpaths --ignore-git --parallel=8
         --log-level=verbose --flatpak
