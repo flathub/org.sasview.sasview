@@ -133,4 +133,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/SasView/sasview.git
-        commit: 059500a7c638593c8e95d60236de88f87dc77b2e
+        commit: ea7ffa1de9b04dfa041ea64f6d3ef65cbd8188a8
