@@ -1648,8 +1648,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/cb/40/9f1e9dfb78261b7b8660dc07aec6865a8ad1cc8fad117b9b8b2be66afbe5/sasmodels-1.0.8-py3-none-any.whl",
-                    "sha256": "2e1c26d86d097262f9a806c33f66d2cefb0fd06edd94cc795cb54462b011065f"
+                    "url": "https://files.pythonhosted.org/packages/86/c1/f6ce984e2d698a4c080493c297494c65999926b7fa7f125bc0bc22e211db/sasmodels-1.0.9-py3-none-any.whl",
+                    "sha256": "a2aace0003c2077b545a88729af2a2627748e3ba9f6f624945860afe47b80f2f"
                 }
             ]
         }
