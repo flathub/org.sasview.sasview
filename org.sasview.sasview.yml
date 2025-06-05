@@ -99,6 +99,7 @@ modules:
         url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.28/OpenBLAS-0.3.28.tar.gz
         sha256: f1003466ad074e9b0c8d421a204121100b0751c96fc6fcf3d1456bd12f8a00a1
   - shared-modules/glu/glu-9.json
+  - python3-requirements-dev.json
   - python3-requirements.json
   - name: patchelf
     buildsystem: autotools
