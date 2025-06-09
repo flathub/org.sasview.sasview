@@ -697,6 +697,20 @@
                     "sha256": "0e0dc2e0bfaa2e1bd238e0236cf8a2b7e2250ccaa29c1aa8d0e61fa664b0289d"
                 }
             ]
+        },
+        {
+            "name": "python3-scikit-build-core",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"scikit-build-core\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/23/f4/b1e4fe9cbfabbfd612f9050cecc794b75aa006d323f599a50be38c5bf4ce/scikit_build_core-0.11.4.tar.gz",
+                    "sha256": "5b194bbb04092ae327d294b23e4bbffb6181adce4259440a86c9cf6abb8eaa6c"
+                }
+            ]
         }
     ]
 }
