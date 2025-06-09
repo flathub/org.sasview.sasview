@@ -6777,6 +6777,34 @@
                     "sha256": "0c78f81a909b302a487a0b5b98d2c9c835a504d0fbf96e20706eab19de2a7ec7"
                 }
             ]
+        },
+        {
+            "name": "python3-sasmodels",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sasmodels\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/SasView/sasmodels.git",
+                    "commit": "cc36b479dc91e70c2fd5271b4ee764c79817a3ff"
+                }
+            ]
+        },
+        {
+            "name": "python3-sasdata",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sasdata\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/SasView/sasdata.git",
+                    "commit": "cfaa7b9b3a62c8ddb92547e78472cae2a96a88a1"
+                }
+            ]
         }
     ]
 }
