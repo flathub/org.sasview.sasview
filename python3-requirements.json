@@ -4888,6 +4888,11 @@
             "sources": [
                 {
                     "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/10/d6/645cffd9592a979405d332da6c5e5759e71c064d5d546362e1758e929066/zope_container-6.1.tar.gz",
+                    "sha256": "8e3f1ace03324defddcc28a1c851c3b2565c098bc17a0b76ac044557fecc9cf1"
+                },
+                {
+                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/4b/bd/5dd0c5bd5ac2d518c18bc3f4746028f931d77b4d4b83cbcb8c4271ab465b/btrees-6.1.tar.gz",
                     "sha256": "e18746f8641869a20f45328c9b5f97dc6c71a1195960356aef63b75f5c8d445f"
                 },
