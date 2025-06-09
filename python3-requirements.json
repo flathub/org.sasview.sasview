@@ -2074,20 +2074,6 @@
             ]
         },
         {
-            "name": "python3-llvmlite",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"llvmlite==0.44.0\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/89/6a/95a3d3610d5c75293d5dbbb2a76480d5d4eeba641557b69fe90af6c5b84e/llvmlite-0.44.0.tar.gz",
-                    "sha256": "07667d66a5d150abed9157ab6c0b9393c9356f229784a4385c02f99e94fc94d4"
-                }
-            ]
-        },
-        {
             "name": "python3-lxml",
             "buildsystem": "simple",
             "build-commands": [
@@ -2192,30 +2178,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/a0/c4/c2971a3ba4c6103a3d10c4b0f24f461ddc027f0f09763220cf35ca1401b3/nest_asyncio-1.6.0-py3-none-any.whl",
                     "sha256": "87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c"
-                }
-            ]
-        },
-        {
-            "name": "python3-numba",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"numba==0.61.2\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/89/6a/95a3d3610d5c75293d5dbbb2a76480d5d4eeba641557b69fe90af6c5b84e/llvmlite-0.44.0.tar.gz",
-                    "sha256": "07667d66a5d150abed9157ab6c0b9393c9356f229784a4385c02f99e94fc94d4"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1c/a0/e21f57604304aa03ebb8e098429222722ad99176a4f979d34af1d1ee80da/numba-0.61.2.tar.gz",
-                    "sha256": "8750ee147940a6637b80ecf7f95062185ad8726c8c28a2295b8ec1160a196f7d"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/dc/b2/ce4b867d8cd9c0ee84938ae1e6a6f7926ebf928c9090d036fc3c6a04f946/numpy-2.2.5.tar.gz",
-                    "sha256": "a9c0d994680cd991b1cb772e8b297340085466a6fe964bc9d4e80f5e2f43c291"
                 }
             ]
         },
