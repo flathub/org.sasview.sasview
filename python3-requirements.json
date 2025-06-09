@@ -2809,10 +2809,17 @@
         {
             "name": "python3-python-bidi",
             "buildsystem": "simple",
+            "build-options": {
+                "append-path": "/usr/lib/sdk/rust-stable/bin",
+                "env": {
+                    "CARGO_HOME": "/run/build/python3-python-bidi/cargo"
+                }
+            },
             "build-commands": [
                 "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-bidi==0.6.6\" --no-build-isolation"
             ],
             "sources": [
+                "bidi_cargo_sources.json",
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/c4/de/1822200711beaadb2f334fa25f59ad9c2627de423c103dde7e81aedbc8e2/python_bidi-0.6.6.tar.gz",
