@@ -134,7 +134,7 @@ modules:
         url: "https://github.com/NixOS/patchelf.git"
         commit: 769337c227799aa60911562b6940530f4a86eb3c
   - name: qt6-qtdatavisualization
-    buildsystem: cmake-ninja
+    buildsystem: cmake
     sources:
       - type: archive
         url: "https://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/qtdatavis3d-everywhere-src-6.9.0.tar.xz"
