@@ -11,6 +11,7 @@ command: sasview
 finish-args:
   - "--socket=fallback-x11"
   - "--share=ipc"
+  - "--share=network"
   - "--socket=wayland"
   - "--device=dri"
   - "--persist=."
