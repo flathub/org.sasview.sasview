@@ -6,7 +6,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
   - org.freedesktop.Sdk.Extension.llvm19
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: 6.9.1
+base-version: 6.9
 command: sasview
 finish-args:
   - "--socket=fallback-x11"
