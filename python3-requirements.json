@@ -6786,9 +6786,9 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/SasView/sasmodels.git",
-                    "commit": "cc36b479dc91e70c2fd5271b4ee764c79817a3ff"
+                    "type": "archive",
+                    "url": "https://files.pythonhosted.org/packages/92/8b/2b818dd504c6c495e1a692a30b609ad8ed97f5c2bb59f56882e29f249837/sasmodels-1.0.10.tar.gz",
+                    "sha256": "54d979d9a6146be983aba5fd695f1b3454620708332cabb1625c7436866098d1"
                 }
             ]
         },
@@ -6800,9 +6800,9 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/SasView/sasdata.git",
-                    "commit": "cfaa7b9b3a62c8ddb92547e78472cae2a96a88a1"
+                    "type": "archive",
+                    "url": "https://files.pythonhosted.org/packages/58/cc/96d4348bad64b7d3e21dc4fe7d621bc1cd1fb37d4c1a38da535c533ac46a/sasdata-0.10.0.tar.gz",
+                    "sha256": "92f50fe21a636b18ee4dee6152b00a48072c26f3c6e182c963eb8278b98416b2"
                 }
             ]
         }
