@@ -1,16 +1,17 @@
 id: org.sasview.sasview
 runtime: org.kde.Sdk
-runtime-version: 6.8
+runtime-version: 6.9
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
   - org.freedesktop.Sdk.Extension.llvm19
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: 6.8
+base-version: 6.9
 command: sasview
 finish-args:
   - "--socket=fallback-x11"
   - "--share=ipc"
+  - "--share=network"
   - "--socket=wayland"
   - "--device=dri"
   - "--persist=."
@@ -21,6 +22,7 @@ build-options:
   env:
     LLVM_INSTALL_DIR: /usr/lib/sdk/llvm16
     SHIBOKEN_DEBUG_LEVEL: 'full'
+    PKG_CONFIG_PATH: /app/lib64/pkgconfig:/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
 modules:
   - name: ocl-icd
     build-options:
@@ -37,8 +39,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/OCL-dev/ocl-icd.git
-        commit: fdde6677b21329432db8b481e2637cd10f7d3cb2
-        tag: v2.3.2
+        commit: 2faf7063c91fdb0f2471f98bf5b2c49c8f907423
+        tag: v2.3.3
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -48,8 +50,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/KhronosGroup/OpenCL-Headers.git
-            commit: 4ea6df132107e3b4b9407f903204b5522fdffcd6
-            tag: v2024.10.24
+            commit: 2e30669d48718fd460f085b4b35b160dad51ce9d
+            tag: v2025.06.13
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -99,6 +101,32 @@ modules:
         url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.28/OpenBLAS-0.3.28.tar.gz
         sha256: f1003466ad074e9b0c8d421a204121100b0751c96fc6fcf3d1456bd12f8a00a1
   - shared-modules/glu/glu-9.json
+  - python3-requirements-dev.json
+  - name: c-stdaux
+    buildsystem: simple
+    build-options:
+      env:
+        PKG_CONFIG_PATH=/app/lib
+    build-commands:
+      - mkdir build
+      - meson setup build -Dprefix=$FLATPAK_DEST
+      - ninja -C build
+      - ninja -C build install
+    sources:
+      - type: git
+        url: "https://github.com/c-util/c-stdaux.git"
+        commit: 6bc45c0f6e14df97bb4869d8202cf5d020c97fa8
+  - name: c-siphash
+    buildsystem: simple
+    build-commands:
+      - mkdir build
+      - meson setup build -Dprefix=$FLATPAK_DEST
+      - ninja -C build
+      - ninja -C build install
+    sources:
+      - type: git
+        url: "https://github.com/c-util/c-siphash.git"
+        commit: 17888b33f13da800aaa7b75bcf5e633366c87eb4
   - python3-requirements.json
   - name: patchelf
     buildsystem: autotools
@@ -106,6 +134,14 @@ modules:
       - type: git
         url: "https://github.com/NixOS/patchelf.git"
         commit: 769337c227799aa60911562b6940530f4a86eb3c
+  - name: qt6-qtdatavisualization
+    buildsystem: cmake
+    sources:
+      - type: archive
+        url: "https://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/qtdatavis3d-everywhere-src-6.9.0.tar.xz"
+        sha256: 310cb713d58c932a8dfaee3c7cd4cac7f2f77ee8e01038ff7df3f0c87f9d8015
+    post-install:
+      - cp /app/lib/${FLATPAK_ARCH}-linux-gnu/libQt6DataVisualization.so.6 /app/lib/
   - name: pyside-setup
     buildsystem: simple
     build-options:
@@ -121,11 +157,11 @@ modules:
     sources:
       - type: git
         url: "https://code.qt.io/pyside/pyside-setup.git"
-        tag: "6.8.2"
+        tag: "6.9.1"
   - name: sasview
     buildsystem: simple
     build-commands:
-      - pip3 install  --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "." --global-option rebuild_ui --no-build-isolation
+      - pip3 install --no-deps  --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "." --global-option rebuild_ui --no-build-isolation
     post-install:
       - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.metainfo.xml -t /app/share/metainfo/
       - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.png -t /app/share/icons/hicolor/512x512/apps/
@@ -133,4 +169,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/SasView/sasview.git
-        commit: ea7ffa1de9b04dfa041ea64f6d3ef65cbd8188a8
+        tag: "v6.1.0"
