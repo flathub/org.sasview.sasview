@@ -1672,7 +1672,7 @@
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/d9/33/1f075bf72b0b747cb3288d011319aaf64083cf2efef8354174e3ed4540e2/ipython_pygments_lexers-1.1.1-py3-none-any.whl",
-                    "sha256": "25850f025a446d9b359e8d296ba175a36aedd32e83ca9b5060430fe16801f066"
+                    "sha256": "a9462224a505ade19a605f71f8fa63c2048833ce50abc86768a0d81d876dc81c"
                 },
                 {
                     "type": "file",
@@ -4968,8 +4968,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5b/5f/04026e33ceea0347d60ceb9605523fc30183cf180f0bd165f9b674478007/zope.dottedname-6.0-py3-none-any.whl",
-                    "sha256": "023fd3e0790d1dca912c05667e9490f137d3bf124f5954c85214cba67bcd9290"
+                    "url": "https://files.pythonhosted.org/packages/4a/88/b5bfd2d609c17114a9f13c48cd8b6be3a4917b03c9bde7fa2f926bcb3d79/zope_dottedname-6.1-py3-none-any.whl",
+                    "sha256": "74286c52f0861b5b0967a9172fee8c0391360709cd9e7e2f4ea2df54ec8b5293"
                 },
                 {
                     "type": "file",
@@ -5187,13 +5187,13 @@
             "name": "python3-zope.dottedname",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"zope.dottedname==6.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"zope.dottedname==6.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5b/5f/04026e33ceea0347d60ceb9605523fc30183cf180f0bd165f9b674478007/zope.dottedname-6.0-py3-none-any.whl",
-                    "sha256": "023fd3e0790d1dca912c05667e9490f137d3bf124f5954c85214cba67bcd9290"
+                    "url": "https://files.pythonhosted.org/packages/4a/88/b5bfd2d609c17114a9f13c48cd8b6be3a4917b03c9bde7fa2f926bcb3d79/zope_dottedname-6.1-py3-none-any.whl",
+                    "sha256": "74286c52f0861b5b0967a9172fee8c0391360709cd9e7e2f4ea2df54ec8b5293"
                 }
             ]
         },
@@ -5962,8 +5962,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5b/5f/04026e33ceea0347d60ceb9605523fc30183cf180f0bd165f9b674478007/zope.dottedname-6.0-py3-none-any.whl",
-                    "sha256": "023fd3e0790d1dca912c05667e9490f137d3bf124f5954c85214cba67bcd9290"
+                    "url": "https://files.pythonhosted.org/packages/4a/88/b5bfd2d609c17114a9f13c48cd8b6be3a4917b03c9bde7fa2f926bcb3d79/zope_dottedname-6.1-py3-none-any.whl",
+                    "sha256": "74286c52f0861b5b0967a9172fee8c0391360709cd9e7e2f4ea2df54ec8b5293"
                 },
                 {
                     "type": "file",
@@ -6055,8 +6055,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/33/01/6dd11051048313f8a0c8e418d7790bb1af43488900cb82b104bca7a63ae8/zope.structuredtext-5.1-py3-none-any.whl",
-                    "sha256": "561c86389d122eb97a04832a062d53308b614c265435e00eef08b93e00576169"
+                    "url": "https://files.pythonhosted.org/packages/56/bb/a4c40aa7638d04fd332e0215772a8e1f5f8f691ddd1395c0e5c070d181db/zope_structuredtext-5.1-py3-none-any.whl",
+                    "sha256": "a837009f5880c06ac2450df79c8441881e2ec847c1da1057ab2f57ca503dc1d2"
                 }
             ]
         },
@@ -6658,8 +6658,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5b/5f/04026e33ceea0347d60ceb9605523fc30183cf180f0bd165f9b674478007/zope.dottedname-6.1-py3-none-any.whl",
-                    "sha256": "023fd3e0790d1dca912c05667e9490f137d3bf124f5954c85214cba67bcd9290"
+                    "url": "https://files.pythonhosted.org/packages/4a/88/b5bfd2d609c17114a9f13c48cd8b6be3a4917b03c9bde7fa2f926bcb3d79/zope_dottedname-6.1-py3-none-any.whl",
+                    "sha256": "74286c52f0861b5b0967a9172fee8c0391360709cd9e7e2f4ea2df54ec8b5293"
                 },
                 {
                     "type": "file",
@@ -6743,7 +6743,7 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/33/01/6dd11051048313f8a0c8e418d7790bb1af43488900cb82b104bca7a63ae8/zope.structuredtext-5.1-py3-none-any.whl",
+                    "url": "https://files.pythonhosted.org/packages/56/bb/a4c40aa7638d04fd332e0215772a8e1f5f8f691ddd1395c0e5c070d181db/zope_structuredtext-5.1-py3-none-any.whl",
                     "sha256": "a837009f5880c06ac2450df79c8441881e2ec847c1da1057ab2f57ca503dc1d2"
                 },
                 {
@@ -6787,7 +6787,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/92/8b/2b818dd504c6c495e1a692a30b609ad8ed97f5c2bb59f56882e29f249837/sasmodels-1.0.11.tar.gz",
+                    "url": "https://files.pythonhosted.org/packages/a6/ac/6e966e094d63cc105024264790483d453e0b6476ac6702a525361ca10f3c/sasmodels-1.0.11-py3-none-any.whl",
                     "sha256": "70a2ee366bcf9375725e446183b15c50073fdb73d2f5c89f9da880e0eb12a6df"
                 }
             ]
@@ -6801,7 +6801,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/58/cc/96d4348bad64b7d3e21dc4fe7d621bc1cd1fb37d4c1a38da535c533ac46a/sasdata-0.11.0.tar.gz",
+                    "url": "https://files.pythonhosted.org/packages/cc/0b/8a98ee6196ccf99add9521ce9572092580d609c3b93a5464cc06825f62dd/sasdata-0.11.0-py3-none-any.whl",
                     "sha256": "620630191deb443bf9ffcdafbff337f925884d3581ecae4a0df1bcc9c965e64a"
                 }
             ]
