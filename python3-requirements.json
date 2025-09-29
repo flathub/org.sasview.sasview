@@ -617,8 +617,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a6/16/43264e4a779dd8588c21a70f0709665ee8f611211bdd2c87d952cfa7c776/propcache-0.3.2.tar.gz",
-                    "sha256": "20d7d62e4e7ef05f221e0db2856b979540686342e7dd9973b815599c7057e168"
+                    "url": "https://files.pythonhosted.org/packages/cc/35/cc0aaecf278bb4575b8555f2b137de5ab821595ddae9da9d3cd1da4072c7/propcache-0.3.2-py3-none-any.whl",
+                    "sha256": "98f1ec44fb675f5052cccc8e609c46ed23a35a1cfd18545ad4e29002d858a43f"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/b4/2d/2345fce04cfd4bee161bf1e7d9cdc702e3e16109021035dbb24db654a622/yarl-1.20.1-py3-none-any.whl",
+                    "sha256": "83b8eb083fe4683c6115795d9fc1cfaf2cbbefb19b3a1cb68f6527460f483a77"
                 },
                 {
                     "type": "file",
