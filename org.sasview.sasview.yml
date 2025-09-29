@@ -128,6 +128,14 @@ modules:
         url: "https://github.com/c-util/c-siphash.git"
         commit: 17888b33f13da800aaa7b75bcf5e633366c87eb4
   - python3-requirements.json
+  - name: python-pyproject-hooks
+    build-backend: setuptools
+    buildsystem: simple
+    build-commands:
+      pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} . --no-build-isolation
+    sources:
+    - type: pypi
+      name: python-pyproject-hooks
   - name: patchelf
     buildsystem: autotools
     sources:
@@ -169,4 +177,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/SasView/sasview.git
-        tag: "v6.1.1"
+        branch: "release-6.1.1"
