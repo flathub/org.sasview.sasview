@@ -7,6 +7,8 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.llvm19
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: 6.9
+cleanup-commands:
+  - /app/cleanup-BaseApp.sh
 command: sasview
 finish-args:
   - "--socket=fallback-x11"
@@ -106,7 +108,7 @@ modules:
     buildsystem: simple
     build-options:
       env:
-        PKG_CONFIG_PATH=/app/lib
+        PKG_CONFIG_PATH: /app/lib
     build-commands:
       - mkdir build
       - meson setup build -Dprefix=$FLATPAK_DEST
@@ -131,10 +133,11 @@ modules:
   - name: python-pyproject-hooks
     buildsystem: simple
     build-commands:
-      pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} . --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} . --no-build-isolation
     sources:
-    - type: pypi
-      name: python-pyproject-hooks
+    - type: archive
+      url: "https://files.pythonhosted.org/packages/e7/82/28175b2414effca1cdac8dc99f76d660e7a4fb0ceefa4b4ab8f5f6742925/pyproject_hooks-1.2.0.tar.gz"
+      sha256: 1e859bd5c40fae9448642dd871adf459e5e2084186e8d2c2a79a824c970da1f8
   - name: patchelf
     buildsystem: autotools
     sources:
@@ -175,5 +178,5 @@ modules:
       - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.desktop -t /app/share/applications/
     sources:
       - type: git
-        url: https://github.com/SasView/sasview.git
+        url: "https://github.com/SasView/sasview.git"
         branch: "release-6.1.1"
