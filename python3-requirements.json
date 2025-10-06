@@ -6970,7 +6970,7 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
+                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/a6/ac/6e966e094d63cc105024264790483d453e0b6476ac6702a525361ca10f3c/sasmodels-1.0.11-py3-none-any.whl",
                     "sha256": "70a2ee366bcf9375725e446183b15c50073fdb73d2f5c89f9da880e0eb12a6df"
                 }
@@ -6984,7 +6984,7 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
+                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/cc/0b/8a98ee6196ccf99add9521ce9572092580d609c3b93a5464cc06825f62dd/sasdata-0.11.0-py3-none-any.whl",
                     "sha256": "620630191deb443bf9ffcdafbff337f925884d3581ecae4a0df1bcc9c965e64a"
                 }
