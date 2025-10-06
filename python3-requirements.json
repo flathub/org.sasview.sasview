@@ -6724,12 +6724,77 @@
             ]
         },
         {
+            "name": "python3-frozenlist-x86",
+            "buildsystem": "simple",
+            "only-arches": ["x86_64"],
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"frozenlist\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/6a/bd/d91c5e39f490a49df14320f4e8c80161cfcce09f1e2cde1edd16a551abb3/frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl",
+                    "sha256": "494a5952b1c597ba44e0e78113a7266e656b9794eec897b19ead706bd7074383"
+                }
+            ]
+        },
+        {
+            "name": "python3-frozenlist-arm",
+            "buildsystem": "simple",
+            "only-arches": ["aarch64"],
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"frozenlist\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/8f/83/f61505a05109ef3293dfb1ff594d13d64a2324ac3482be2cedc2be818256/frozenlist-1.8.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+                    "sha256": "96f423a119f4777a4a056b66ce11527366a8bb92f54e541ade21f2374433f6d4"
+                }
+            ]
+        },
+        {
+            "name": "python3-propcache-x86",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"propcache==0.4.0\" --no-build-isolation"               
+            ],
+            "only-arches": ["x86_64"],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/84/5e/036d2b105927ae7f179346c9911d16c345f4dba5a19a063f23a8d28acfbd/propcache-0.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+                    "sha256": "22f589652ee38de96aa58dd219335604e09666092bc250c1d9c26a55bcef9932"
+                }
+            ]
+        },
+        {
+            "name": "python3-propcache-arm",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"propcache==0.4.0\" --no-build-isolation"
+            ],
+            "only-arches": ["aarch64"],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/9f/8e/e0a0bd376c3440476b924eca517589ee535bb4520420d178268bf88558ba/propcache-0.4.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+                    "sha256": "d9a8d277dc218ddf04ec243a53ac309b1afcebe297c0526a8f82320139b56289"
+                }
+            ]
+        },
+        {
             "name": "python3-bumps",
             "buildsystem": "simple",
             "build-commands": [
                 "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"bumps==1.0.2\" --no-build-isolation"
             ],
             "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/44/d7/8f5d2be1a5fed3b0b5ccd3e800153c0f4dd84c2a688d25bce0bb0cb1f87f/pep517-0.13.1.tar.gz",
+                    "sha256": "1b2fa2ffd3938bb4beffe5d6146cbcb2bda996a5a4da9f31abffd8b24e07b317"
+                },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/0f/15/5bf3b99495fb160b63f95972b81750f18f7f4e02ad051373b669d17d44f2/aiohappyeyeballs-2.6.1-py3-none-any.whl",
@@ -6784,11 +6849,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/4b/42/97a13e47a1e51a5a7142475bbcf5107fe3a68fc34aef331c897d5fb98ad0/fonttools-4.60.1.tar.gz",
                     "sha256": "ef00af0439ebfee806b25f24c8f92109157ff3fac5731dc7867957812e87b8d9"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2d/f5/c831fac6cc817d26fd54c7eaccd04ef7e0288806943f7cc5bbf69f3ac1f0/frozenlist-1.8.0.tar.gz",
-                    "sha256": "3ede829ed8d842f6cd48fc7081d7a41001a56f1f38603f9d49bf3020d59a31ad"
                 },
                 {
                     "type": "file",
@@ -6857,11 +6917,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ea/c8/d70cd26d845c6d85479d8f5a11a0fd7151e9bc4794cc5e6eb5a790f12df8/propcache-0.4.0.tar.gz",
-                    "sha256": "c1ad731253eb738f9cadd9fa1844e019576c70bca6a534252e97cf33a57da529"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/10/5e/1aa9a93198c6b64513c9d7752de7422c06402de6600a8767da1524f9570b/pyparsing-3.2.5-py3-none-any.whl",
                     "sha256": "e38a4f02064cf41fe6593d328d0512495ad1f3d8a91c4f73fc401b3079a59a5e"
                 },
@@ -6902,8 +6957,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2d/d1/a1ee68b513f31c6de9af56cdfafebb4939bf0d6528945a862e101699ae98/yarl-1.21.0.tar.gz",
-                    "sha256": "866c17223f7d734377a260a2800e14791cb5e55ec252de624e053a0b36b8568a"
+                    "url": "https://files.pythonhosted.org/packages/08/be/3ebe06c6903bb0a0e63c1f445124c6367f4080ef347703fe6cd806672a28/yarl-1.21.0-py3-none-any.whl",
+                    "sha256": "c464852c531e44abc5ba05d0c0c97a8fa63719106b3dca46fedae14daedf46ae"
                 }
             ]
         },
