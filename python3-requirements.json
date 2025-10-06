@@ -6966,7 +6966,7 @@
             "name": "python3-sasmodels",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --no-deps --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \".\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --no-deps --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sasmodels\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -6980,7 +6980,7 @@
             "name": "python3-sasdata",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \".\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sasdata\" --no-build-isolation"
             ],
             "sources": [
                 {
