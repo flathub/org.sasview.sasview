@@ -171,4 +171,4 @@ modules:
     sources:
       - type: git
         url: "https://github.com/SasView/sasview.git"
-        commit: 2ac8db83ca76809d390a8430e3e95606e7c42999
+        tag: "v6.1.1"
