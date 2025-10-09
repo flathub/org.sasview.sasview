@@ -7,6 +7,8 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.llvm19
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: 6.9
+cleanup-commands:
+  - /app/cleanup-BaseApp.sh
 command: sasview
 finish-args:
   - "--socket=fallback-x11"
@@ -50,8 +52,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/KhronosGroup/OpenCL-Headers.git
-            commit: 2e30669d48718fd460f085b4b35b160dad51ce9d
-            tag: v2025.06.13
+            commit: 8a97ebc88daa3495d6f57ec10bb515224400186f
+            tag: v2025.07.22
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -106,7 +108,7 @@ modules:
     buildsystem: simple
     build-options:
       env:
-        PKG_CONFIG_PATH=/app/lib
+        PKG_CONFIG_PATH: /app/lib
     build-commands:
       - mkdir build
       - meson setup build -Dprefix=$FLATPAK_DEST
@@ -138,8 +140,8 @@ modules:
     buildsystem: cmake
     sources:
       - type: archive
-        url: "https://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/qtdatavis3d-everywhere-src-6.9.0.tar.xz"
-        sha256: 310cb713d58c932a8dfaee3c7cd4cac7f2f77ee8e01038ff7df3f0c87f9d8015
+        url: "https://download.qt.io/official_releases/qt/6.9/6.9.1/submodules/qtdatavis3d-everywhere-src-6.9.1.tar.xz"
+        sha256: 4c798b75f2a7c7e61ebb01f405a54fd80513ae46986714fa0fa05e8f6a5b32c7
     post-install:
       - cp /app/lib/${FLATPAK_ARCH}-linux-gnu/libQt6DataVisualization.so.6 /app/lib/
   - name: pyside-setup
@@ -168,5 +170,5 @@ modules:
       - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.desktop -t /app/share/applications/
     sources:
       - type: git
-        url: https://github.com/SasView/sasview.git
-        tag: "v6.1.0"
+        url: "https://github.com/SasView/sasview.git"
+        tag: "v6.1.1"
