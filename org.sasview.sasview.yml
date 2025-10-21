@@ -11,19 +11,19 @@ cleanup-commands:
   - /app/cleanup-BaseApp.sh
 command: sasview
 finish-args:
-  - "--socket=fallback-x11"
-  - "--share=ipc"
-  - "--share=network"
-  - "--socket=wayland"
-  - "--device=dri"
-  - "--persist=."
-  - "--env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess"
+  - --socket=fallback-x11
+  - --share=ipc
+  - --share=network
+  - --socket=wayland
+  - --device=dri
+  - --persist=.
+  - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
 build-options:
   append-path: /usr/lib/sdk/llvm16/bin
   append-ld-library-path: /usr/lib/sdk/llvm16/lib
   env:
     LLVM_INSTALL_DIR: /usr/lib/sdk/llvm16
-    SHIBOKEN_DEBUG_LEVEL: 'full'
+    SHIBOKEN_DEBUG_LEVEL: full
     PKG_CONFIG_PATH: /app/lib64/pkgconfig:/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
 modules:
   - name: ocl-icd
@@ -41,8 +41,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/OCL-dev/ocl-icd.git
-        commit: 2faf7063c91fdb0f2471f98bf5b2c49c8f907423
-        tag: v2.3.3
+        commit: e5b32d5395582d027c3d68d7dbdf92e961bdc9c8
+        tag: v2.3.4
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -67,15 +67,15 @@ modules:
   - name: qhull
     buildsystem: cmake-ninja
     config-opts:
-      - "-DBUILD_STATIC_LIBS=OFF"
+      - -DBUILD_STATIC_LIBS=OFF
     sources:
       - type: archive
         url: https://github.com/qhull/qhull/archive/refs/tags/2020.2.tar.gz
         sha256: 59356b229b768e6e2b09a701448bfa222c37b797a84f87f864f97462d8dbc7c5
     cleanup:
-      - "/bin"
-      - "/share/man"
-      - "/share/doc"
+      - /bin
+      - /share/man
+      - /share/doc
   - name: libsodium
     buildsystem: autotools
     sources:
@@ -91,13 +91,13 @@ modules:
   - name: openblas
     no-autogen: true
     make-args:
-      - "DYNAMIC_ARCH=1"
-      - "FC=gfortran"
-      - "NO_CBLAS=1"
-      - "NO_LAPACKE=1"
-      - "USE_OPENMP=0"
+      - DYNAMIC_ARCH=1
+      - FC=gfortran
+      - NO_CBLAS=1
+      - NO_LAPACKE=1
+      - USE_OPENMP=0
     make-install-args:
-      - "PREFIX=/app"
+      - PREFIX=/app
     sources:
       - type: archive
         url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.28/OpenBLAS-0.3.28.tar.gz
@@ -116,7 +116,7 @@ modules:
       - ninja -C build install
     sources:
       - type: git
-        url: "https://github.com/c-util/c-stdaux.git"
+        url: https://github.com/c-util/c-stdaux.git
         commit: 6bc45c0f6e14df97bb4869d8202cf5d020c97fa8
   - name: c-siphash
     buildsystem: simple
@@ -127,20 +127,20 @@ modules:
       - ninja -C build install
     sources:
       - type: git
-        url: "https://github.com/c-util/c-siphash.git"
+        url: https://github.com/c-util/c-siphash.git
         commit: 17888b33f13da800aaa7b75bcf5e633366c87eb4
   - python3-requirements.json
   - name: patchelf
     buildsystem: autotools
     sources:
       - type: git
-        url: "https://github.com/NixOS/patchelf.git"
+        url: https://github.com/NixOS/patchelf.git
         commit: 769337c227799aa60911562b6940530f4a86eb3c
   - name: qt6-qtdatavisualization
     buildsystem: cmake
     sources:
       - type: archive
-        url: "https://download.qt.io/official_releases/qt/6.9/6.9.1/submodules/qtdatavis3d-everywhere-src-6.9.1.tar.xz"
+        url: https://download.qt.io/official_releases/qt/6.9/6.9.1/submodules/qtdatavis3d-everywhere-src-6.9.1.tar.xz
         sha256: 4c798b75f2a7c7e61ebb01f405a54fd80513ae46986714fa0fa05e8f6a5b32c7
     post-install:
       - cp /app/lib/${FLATPAK_ARCH}-linux-gnu/libQt6DataVisualization.so.6 /app/lib/
@@ -158,17 +158,21 @@ modules:
       - pip install ./dist/*.whl --prefix=${FLATPAK_DEST}
     sources:
       - type: git
-        url: "https://code.qt.io/pyside/pyside-setup.git"
-        tag: "6.9.1"
+        url: https://code.qt.io/pyside/pyside-setup.git
+        tag: 6.9.1
   - name: sasview
     buildsystem: simple
     build-commands:
-      - pip3 install --no-deps  --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "." --global-option rebuild_ui --no-build-isolation
+      - pip3 install --no-deps  --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "." --global-option rebuild_ui --no-build-isolation
     post-install:
-      - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.metainfo.xml -t /app/share/metainfo/
-      - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.png -t /app/share/icons/hicolor/512x512/apps/
-      - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.desktop -t /app/share/applications/
+      - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.metainfo.xml
+        -t /app/share/metainfo/
+      - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.png -t
+        /app/share/icons/hicolor/512x512/apps/
+      - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.desktop
+        -t /app/share/applications/
     sources:
       - type: git
-        url: "https://github.com/SasView/sasview.git"
-        tag: "v6.1.1"
+        url: https://github.com/SasView/sasview.git
+        tag: v6.1.1
