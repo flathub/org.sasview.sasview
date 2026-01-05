@@ -163,7 +163,7 @@ modules:
   - name: sasview
     buildsystem: simple
     build-commands:
-      - pip3 install --no-deps  --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "." --global-option rebuild_ui --no-build-isolation
+      - pip3 install --no-deps  --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "." --config-settings="--build-option=rebuild_ui" --no-build-isolation
     post-install:
       - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.metainfo.xml -t /app/share/metainfo/
       - install -Dm0644 build_tools/application_metadata/org.sasview.sasview.png -t /app/share/icons/hicolor/512x512/apps/
@@ -171,4 +171,4 @@ modules:
     sources:
       - type: git
         url: "https://github.com/SasView/sasview.git"
-        tag: "v6.1.1"
+        tag: "v6.1.2"

@@ -1231,8 +1231,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz",
-                    "sha256": "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
+                    "url": "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz",
+                    "sha256": "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
                 },
                 {
                     "type": "file",
@@ -1831,8 +1831,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz",
-                    "sha256": "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
+                    "url": "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz",
+                    "sha256": "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
                 },
                 {
                     "type": "file",
@@ -2011,13 +2011,13 @@
             "name": "python3-MarkupSafe",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"MarkupSafe==3.0.2\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"MarkupSafe==3.0.3\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz",
-                    "sha256": "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
+                    "url": "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz",
+                    "sha256": "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
                 }
             ]
         },
@@ -3208,8 +3208,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz",
-                    "sha256": "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
+                    "url": "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz",
+                    "sha256": "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
                 },
                 {
                     "type": "file",
@@ -6941,8 +6941,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a6/ac/6e966e094d63cc105024264790483d453e0b6476ac6702a525361ca10f3c/sasmodels-1.0.11-py3-none-any.whl",
-                    "sha256": "70a2ee366bcf9375725e446183b15c50073fdb73d2f5c89f9da880e0eb12a6df"
+                    "url": "https://files.pythonhosted.org/packages/28/8e/805e412f5c24a3f12927b7bd556bc8ce480f9de8d7dc6f4fb50e870c54ea/sasmodels-1.0.12-py3-none-any.whl",
+                    "sha256": "7a24bbd442d4beddc0b779e8d57ad2507aad614e2c1a12656dc862e293228166"
                 }
             ]
         },
