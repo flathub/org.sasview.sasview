@@ -6941,8 +6941,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/28/8e/805e412f5c24a3f12927b7bd556bc8ce480f9de8d7dc6f4fb50e870c54ea/sasmodels-1.0.12-py3-none-any.whl",
-                    "sha256": "7a24bbd442d4beddc0b779e8d57ad2507aad614e2c1a12656dc862e293228166"
+                    "url": "https://files.pythonhosted.org/packages/9e/47/fcae44b6188a55527d778fedfe6e6e5c6ede00a0aca290a1e9857db7a8fa/sasmodels-1.1.0-py3-none-any.whl",
+                    "sha256": "5901084845000689d13bb644094976d9e096cda356181cb6b9346ffcf6074a60"
                 }
             ]
         },
@@ -6955,8 +6955,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/cc/0b/8a98ee6196ccf99add9521ce9572092580d609c3b93a5464cc06825f62dd/sasdata-0.11.0-py3-none-any.whl",
-                    "sha256": "620630191deb443bf9ffcdafbff337f925884d3581ecae4a0df1bcc9c965e64a"
+                    "url": "https://files.pythonhosted.org/packages/a7/72/6ca6e58958bb2251a4fe68a964106d608d89af33cfbe21cf418b173574f5/sasdata-0.12.2-py3-none-any.whl",
+                    "sha256": "dc0112b48ac32649cabd7d3748e0e6b8c8049731223012038ea8688c6db0a5af"
                 }
             ]
         }
