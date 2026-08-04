@@ -144,22 +144,6 @@ modules:
         sha256: 4c798b75f2a7c7e61ebb01f405a54fd80513ae46986714fa0fa05e8f6a5b32c7
     post-install:
       - cp /app/lib/${FLATPAK_ARCH}-linux-gnu/libQt6DataVisualization.so.6 /app/lib/
-  - name: pyside-setup
-    buildsystem: simple
-    build-options:
-      append-path: /usr/lib/sdk/llvm19/bin
-      append-ld-library-path: /usr/lib/sdk/llvm19/lib
-      env:
-        LLVM_INSTALL_DIR: /usr/lib/sdk/llvm19
-    build-commands:
-      - python3 setup.py build --qtpaths=/usr/bin/qtpaths --ignore-git --parallel=8
-        --log-level=verbose --flatpak
-      - python3 create_wheels.py --build-dir ./build/qfp-*-release
-      - pip install ./dist/*.whl --prefix=${FLATPAK_DEST}
-    sources:
-      - type: git
-        url: https://code.qt.io/pyside/pyside-setup.git
-        tag: 6.9.1
   - name: sasview
     buildsystem: simple
     build-commands:
