@@ -1,12 +1,12 @@
 id: org.sasview.sasview
 runtime: org.kde.Sdk
-runtime-version: 6.9
+runtime-version: 6.11
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-  - org.freedesktop.Sdk.Extension.llvm19
-base: com.riverbankcomputing.PyQt.BaseApp
-base-version: 6.9
+  - org.freedesktop.Sdk.Extension.llvm22
+base: io.qt.PySide.BaseApp
+base-version: 6.11
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 command: sasview
@@ -19,10 +19,10 @@ finish-args:
   - --persist=.
   - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
 build-options:
-  append-path: /usr/lib/sdk/llvm16/bin
-  append-ld-library-path: /usr/lib/sdk/llvm16/lib
+  append-path: /usr/lib/sdk/llvm22/bin
+  append-ld-library-path: /usr/lib/sdk/llvm22/lib
   env:
-    LLVM_INSTALL_DIR: /usr/lib/sdk/llvm16
+    LLVM_INSTALL_DIR: /usr/lib/sdk/llvm22
     SHIBOKEN_DEBUG_LEVEL: full
     PKG_CONFIG_PATH: /app/lib64/pkgconfig:/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
 modules:
@@ -41,8 +41,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/OCL-dev/ocl-icd.git
-        commit: e5b32d5395582d027c3d68d7dbdf92e961bdc9c8
-        tag: v2.3.4
+        commit: 3e1155f0796cb9ac0fe309664d98e4b0ed2c3300
+        tag: v2.3.5
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
