@@ -74,6 +74,7 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - -DBUILD_STATIC_LIBS=OFF
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: archive
         url: https://github.com/qhull/qhull/archive/refs/tags/2020.2.tar.gz
