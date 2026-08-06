@@ -3292,30 +3292,6 @@
             ]
         },
         {
-            "name": "python3-pyside6",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyside6==6.11.1\" --no-build-isolation"
-            ],
-            "sources": []
-        },
-        {
-            "name": "python3-pyside6-addons",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyside6-addons==6.11.1\" --no-build-isolation"
-            ],
-            "sources": []
-        },
-        {
-            "name": "python3-pyside6-essentials",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyside6-essentials==6.11.1\" --no-build-isolation"
-            ],
-            "sources": []
-        },
-        {
             "name": "python3-python-bidi",
             "buildsystem": "simple",
             "build-commands": [
