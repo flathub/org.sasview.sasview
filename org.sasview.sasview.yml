@@ -144,13 +144,30 @@ modules:
         url: https://github.com/NixOS/patchelf.git
         commit: 769337c227799aa60911562b6940530f4a86eb3c
   - name: qt6-qtdatavisualization
-    buildsystem: cmake
+    buildsystem: cmake-ninja
     sources:
       - type: archive
         url: https://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/qtdatavis3d-everywhere-src-6.11.1.tar.xz
         sha256: 1e1a7b9c0a947731655334f5d79252d40cdaf58c1801074ea5e9e0821d6693ac
     post-install:
       - cp /app/lib/${FLATPAK_ARCH}-linux-gnu/libQt6DataVisualization.so.6 /app/lib/
+      - cp /app/lib/${FLATPAK_ARCH}-linux-gnu/libQt6DataVisualization.so /app/lib/
+  - name: pyside-setup
+    buildsystem: simple
+    build-options:
+      append-path: /usr/lib/sdk/llvm22/bin
+      append-ld-library-path: /usr/lib/sdk/llvm22/lib
+      env:
+        LLVM_INSTALL_DIR: /usr/lib/sdk/llvm22
+    build-commands:
+      - python3 setup.py build --qtpaths=/usr/bin/qtpaths --ignore-git --parallel=8
+        --log-level=verbose --flatpak
+      - python3 create_wheels.py --build-dir ./build/qfp-*-release
+      - pip install ./dist/*.whl --prefix=${FLATPAK_DEST}
+    sources:
+      - type: git
+        url: https://code.qt.io/pyside/pyside-setup.git
+        tag: 6.11.1
   - name: sasview
     buildsystem: simple
     build-commands:
