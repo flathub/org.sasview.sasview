@@ -13,7 +13,6 @@ finish-args:
   - --socket=wayland
   - --device=dri
   - --persist=.
-  - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
 build-options:
   append-path: /usr/lib/sdk/llvm22/bin
   append-ld-library-path: /usr/lib/sdk/llvm22/lib
