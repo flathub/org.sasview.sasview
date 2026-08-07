@@ -60,6 +60,12 @@ modules:
   - shared-modules/glu/glu-9.json
   - python3-requirements-dev.json
   - python3-requirements.json
+  - name: patchelf
+    buildsystem: autotools
+    sources:
+      - type: git
+        url: https://github.com/NixOS/patchelf.git
+        commit: 769337c227799aa60911562b6940530f4a86eb3c
   - name: qt6-qtdatavisualization
     buildsystem: cmake-ninja
     sources:
