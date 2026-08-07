@@ -3,7 +3,6 @@ runtime: org.kde.Sdk
 runtime-version: 6.11
 sdk: org.kde.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.rust-stable
   - org.freedesktop.Sdk.Extension.llvm22
 command: sasview
 finish-args:
