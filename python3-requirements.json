@@ -3876,7 +3876,7 @@
             "name": "python3-sasmodels",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-deps --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sasmodels==1.1.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sasmodels==1.1.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -4159,6 +4159,22 @@
                 },
                 {
                     "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ce/73/1939e31b37bc43e05ef09dfbe6a2297a8bf600c63ad5e7a3c23f9a3137f5/tccbox-2025.10.27-py3-none-manylinux2014_x86_64.whl",
+                    "sha256": "186668c7ec43b30158c000709766b78e8eed59af7da126841475d6710e35132c",
+                    "only-arches": [
+                        "x86_64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/5f/1e/ac940d639fd4539a96aaaba30eda06774b4ba056133e0dc8e50b0922530a/tccbox-2025.10.27-py3-none-manylinux2014_aarch64.whl",
+                    "sha256": "24db07b5d849a548c0aadf7e2a69235a54ded36c29228f8fe15c6c3b1de7ff75",
+                    "only-arches": [
+                        "aarch64"
+                    ]
+                },
+                {
+                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/8f/5e/f1e1dd319e35e962a4e00b33150a8868b6329cc1d19fd533436ba5488f09/uncertainties-3.2.3-py3-none-any.whl",
                     "sha256": "313353900d8f88b283c9bad81e7d2b2d3d4bcc330cbace35403faaed7e78890a"
                 },
@@ -4407,6 +4423,31 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl",
                     "sha256": "a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78"
+                }
+            ]
+        },
+        {
+            "name": "python3-tccbox",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tccbox==2025.10.27\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ce/73/1939e31b37bc43e05ef09dfbe6a2297a8bf600c63ad5e7a3c23f9a3137f5/tccbox-2025.10.27-py3-none-manylinux2014_x86_64.whl",
+                    "sha256": "186668c7ec43b30158c000709766b78e8eed59af7da126841475d6710e35132c",
+                    "only-arches": [
+                        "x86_64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/5f/1e/ac940d639fd4539a96aaaba30eda06774b4ba056133e0dc8e50b0922530a/tccbox-2025.10.27-py3-none-manylinux2014_aarch64.whl",
+                    "sha256": "24db07b5d849a548c0aadf7e2a69235a54ded36c29228f8fe15c6c3b1de7ff75",
+                    "only-arches": [
+                        "aarch64"
+                    ]
                 }
             ]
         },
