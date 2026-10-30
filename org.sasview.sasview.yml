@@ -18,7 +18,8 @@ build-options:
   env:
     LLVM_INSTALL_DIR: /usr/lib/sdk/llvm22
     SHIBOKEN_DEBUG_LEVEL: full
-    PKG_CONFIG_PATH: /app/lib64/pkgconfig:/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+    PKG_CONFIG_PATH: 
+      /app/lib64/pkgconfig:/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
 modules:
   - name: ruby
     buildsystem: autotools
@@ -52,8 +53,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/KhronosGroup/OpenCL-Headers.git
-            commit: 8a97ebc88daa3495d6f57ec10bb515224400186f
-            tag: v2025.07.22
+            commit: 6fe718c31a45fe25151362a72ef041c3a1047cbd
+            tag: v2026.05.29
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -70,7 +71,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/qtdatavis3d-everywhere-src-6.11.1.tar.xz
+        url: 
+          https://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/qtdatavis3d-everywhere-src-6.11.1.tar.xz
         sha256: 1e1a7b9c0a947731655334f5d79252d40cdaf58c1801074ea5e9e0821d6693ac
     post-install:
       - cp /app/lib/${FLATPAK_ARCH}-linux-gnu/libQt6DataVisualization.so.6 /app/lib/
